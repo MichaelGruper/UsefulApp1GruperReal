@@ -6,12 +6,13 @@
 //
 
 class AppData{
-    
-    
-    
+    static var rbArr: [RBStats] = []
+   static var encoder = JSONEncoder()
+   static var decoder = JSONDecoder()
+   static var defaults = UserDefaults.standard
 }
 
-class RBStats{
+class RBStats: Codable{
     var att: Int
     var yds: Double
     var avggme: Double

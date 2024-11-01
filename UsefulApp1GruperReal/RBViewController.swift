@@ -23,7 +23,15 @@ class TempVars{
 class RBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //AppData.defaults.set(AppData.rbArr, forKey: "rbArr")
+        if let rb = AppData.defaults.data(forKey: "rbArr"){
+            if let inRB = try? AppData.decoder.decode([RBStats].self, from: rb){
+                AppData.rbArr = inRB
+                for r in AppData.rbArr{
+                    print(r.name)
+                }
+            }
+        }
         }
     
     @IBAction func rbNameAction(_ sender: UIButton) {
@@ -159,6 +167,37 @@ class RBViewController: UIViewController {
                 //print(TempVars.yds)
             }
 
+        }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(enterAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func saveAction(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Confirm", message: "Are you sure you wish to save? This will reset all entered stats and save what has been input.", preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let enterAction = UIAlertAction(title: "Enter", style: .default) { _ in
+            
+            AppData.rbArr.append(RBStats(att: TempVars.att, yds: TempVars.yds, avggme: TempVars.avggme, avgatt: TempVars.avgatt, lng: TempVars.lng, td: TempVars.td, fum: TempVars.fum, lst: TempVars.lst, name: TempVars.name, num: TempVars.num))
+            
+           if let rb = try? AppData.encoder.encode(AppData.rbArr){
+               AppData.defaults.set(rb, forKey: "rbArr")
+            }
+            
+            
+            TempVars.att = 0
+            TempVars.yds = 0
+            TempVars.lng = 0
+            TempVars.td = 0
+            TempVars.fum = 0
+            TempVars.lst = 0
+            TempVars.name = ""
+            TempVars.num = 0
+            //print(AppData.rbArr)
         }
 
         alertController.addAction(cancelAction)
