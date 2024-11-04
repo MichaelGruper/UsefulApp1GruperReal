@@ -24,6 +24,9 @@ class RBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //AppData.defaults.set(AppData.rbArr, forKey: "rbArr")
+        }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if let rb = AppData.defaults.data(forKey: "rbArr"){
             if let inRB = try? AppData.decoder.decode([RBStats].self, from: rb){
                 AppData.rbArr = inRB
@@ -32,7 +35,7 @@ class RBViewController: UIViewController {
                 }
             }
         }
-        }
+    }
     
     @IBAction func rbNameAction(_ sender: UIButton) {
         var name = ""

@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FA1A7CBB2CD90ED100389667 /* TableVLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A7CBA2CD90ED100389667 /* TableVLViewController.swift */; };
+		FA1A7CBD2CD90EEA00389667 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A7CBC2CD90EEA00389667 /* PlayersViewController.swift */; };
+		FA1A7CBF2CD90F5200389667 /* CrazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A7CBE2CD90F5200389667 /* CrazyCell.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FA64F0542CCFC9F800ECD516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA1A7CBA2CD90ED100389667 /* TableVLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVLViewController.swift; sourceTree = "<group>"; };
+		FA1A7CBC2CD90EEA00389667 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		FA1A7CBE2CD90F5200389667 /* CrazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyCell.swift; sourceTree = "<group>"; };
 		FA64F03A2CCFC9F500ECD516 /* UsefulApp1GruperReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsefulApp1GruperReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA64F0532CCFC9F800ECD516 /* UsefulApp1GruperRealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsefulApp1GruperRealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA64F05D2CCFC9F800ECD516 /* UsefulApp1GruperRealUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsefulApp1GruperRealUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +97,9 @@
 		FA64F0312CCFC9F500ECD516 = {
 			isa = PBXGroup;
 			children = (
+				FA1A7CBE2CD90F5200389667 /* CrazyCell.swift */,
+				FA1A7CBC2CD90EEA00389667 /* PlayersViewController.swift */,
+				FA1A7CBA2CD90ED100389667 /* TableVLViewController.swift */,
 				FA64F03C2CCFC9F500ECD516 /* UsefulApp1GruperReal */,
 				FA64F0562CCFC9F800ECD516 /* UsefulApp1GruperRealTests */,
 				FA64F0602CCFC9F800ECD516 /* UsefulApp1GruperRealUITests */,
@@ -249,6 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1A7CBD2CD90EEA00389667 /* PlayersViewController.swift in Sources */,
+				FA1A7CBF2CD90F5200389667 /* CrazyCell.swift in Sources */,
+				FA1A7CBB2CD90ED100389667 /* TableVLViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
