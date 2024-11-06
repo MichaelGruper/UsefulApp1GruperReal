@@ -10,6 +10,7 @@ import UIKit
 class PlayersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableViewOutlet: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(AppData.rbArr.count)
         return AppData.rbArr.count
     }
     
@@ -31,6 +32,9 @@ class PlayersViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "statsSegue", sender: nil)
+    }
 
 }
+

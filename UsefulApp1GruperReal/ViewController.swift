@@ -45,6 +45,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let rb = AppData.defaults.data(forKey: "rbArr"){
+            if let inRB = try? AppData.decoder.decode([RBStats].self, from: rb){
+                AppData.rbArr = inRB
+                for r in AppData.rbArr{
+                    print(r.name)
+                }
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
