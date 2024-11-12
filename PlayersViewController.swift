@@ -23,6 +23,8 @@ class PlayersViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,7 @@ class PlayersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppData.clickedOn = AppData.rbArr[indexPath.row]
         performSegue(withIdentifier: "statsSegue", sender: nil)
     }
 

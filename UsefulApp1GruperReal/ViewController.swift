@@ -7,9 +7,11 @@
 
 class AppData{
     static var rbArr: [RBStats] = []
+    static var wrArr: [WRStats] = []
    static var encoder = JSONEncoder()
    static var decoder = JSONDecoder()
    static var defaults = UserDefaults.standard
+    static var clickedOn: RBStats!
 }
 
 class RBStats: Codable{
@@ -35,6 +37,26 @@ class RBStats: Codable{
         self.lst = lst
         self.name = name
         self.num = num
+    }
+}
+
+class WRStats{
+    var td: Int
+    var yds: Double
+    var yac: Double
+    var tgt: Int
+    var rec: Int
+    var fum: Int
+    var lst: Int
+    
+    init(td: Int, yds: Double, yac: Double, tgt: Int, rec: Int, fum: Int, lst: Int) {
+        self.td = td
+        self.yds = yds
+        self.yac = yac
+        self.tgt = tgt
+        self.rec = rec
+        self.fum = fum
+        self.lst = lst
     }
 }
 

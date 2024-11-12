@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TempVars{
+class TempVarsRB{
     static var att = 0
     static var name = ""
    static var num = 0
@@ -44,7 +44,7 @@ class RBViewController: UIViewController {
             
             if alertController.textFields![0].text != ""{
                 name = alertController.textFields![0].text!
-                TempVars.name = name
+                TempVarsRB.name = name
                 //print(TempVars.name)
             }
 
@@ -70,7 +70,7 @@ class RBViewController: UIViewController {
             
             if alertController.textFields![0].text != ""{
                 num = Int(alertController.textFields![0].text!)!
-                TempVars.num = num
+                TempVarsRB.num = num
                 //print(TempVars.num)
             }
 
@@ -84,16 +84,16 @@ class RBViewController: UIViewController {
     }
     
     @IBAction func attAction(_ sender: UIButton) {
-        TempVars.att += 1
+        TempVarsRB.att += 1
     }
     @IBAction func lstAction(_ sender: UIButton) {
-        TempVars.lst += 1
+        TempVarsRB.lst += 1
     }
     @IBAction func fumAction(_ sender: UIButton) {
-        TempVars.fum += 1
+        TempVarsRB.fum += 1
     }
     @IBAction func tdAction(_ sender: UIButton) {
-        TempVars.td += 1
+        TempVarsRB.td += 1
     }
     @IBAction func ydsAction(_ sender: UIButton) {
         var yds = 0.0
@@ -109,7 +109,7 @@ class RBViewController: UIViewController {
             
             if alertController.textFields![0].text != ""{
                 yds += Double(alertController.textFields![0].text!)!
-                TempVars.yds = yds
+                TempVarsRB.yds = yds
                 //print(TempVars.yds)
             }
 
@@ -134,7 +134,7 @@ class RBViewController: UIViewController {
             
             if alertController.textFields![0].text != ""{
                 yds = Double(alertController.textFields![0].text!)!
-                TempVars.yds = yds
+                TempVarsRB.yds = yds
                 //print(TempVars.yds)
             }
 
@@ -159,7 +159,7 @@ class RBViewController: UIViewController {
             
             if alertController.textFields![0].text != ""{
                 lng = Int(alertController.textFields![0].text!)!
-                TempVars.lng = lng
+                TempVarsRB.lng = lng
                 //print(TempVars.yds)
             }
 
@@ -178,21 +178,21 @@ class RBViewController: UIViewController {
         
         let enterAction = UIAlertAction(title: "Enter", style: .default) { _ in
             
-            AppData.rbArr.append(RBStats(att: TempVars.att, yds: TempVars.yds, avggme: TempVars.avggme, avgatt: TempVars.avgatt, lng: TempVars.lng, td: TempVars.td, fum: TempVars.fum, lst: TempVars.lst, name: TempVars.name, num: TempVars.num))
+            AppData.rbArr.append(RBStats(att: TempVarsRB.att, yds: TempVarsRB.yds, avggme: TempVarsRB.avggme, avgatt: TempVarsRB.avgatt, lng: TempVarsRB.lng, td: TempVarsRB.td, fum: TempVarsRB.fum, lst: TempVarsRB.lst, name: TempVarsRB.name, num: TempVarsRB.num))
             
            if let rb = try? AppData.encoder.encode(AppData.rbArr){
                AppData.defaults.set(rb, forKey: "rbArr")
             }
             
             
-            TempVars.att = 0
-            TempVars.yds = 0
-            TempVars.lng = 0
-            TempVars.td = 0
-            TempVars.fum = 0
-            TempVars.lst = 0
-            TempVars.name = ""
-            TempVars.num = 0
+            TempVarsRB.att = 0
+            TempVarsRB.yds = 0
+            TempVarsRB.lng = 0
+            TempVarsRB.td = 0
+            TempVarsRB.fum = 0
+            TempVarsRB.lst = 0
+            TempVarsRB.name = ""
+            TempVarsRB.num = 0
             //print(AppData.rbArr)
         }
 

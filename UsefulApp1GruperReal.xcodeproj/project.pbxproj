@@ -11,6 +11,7 @@
 		FA1A7CBD2CD90EEA00389667 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A7CBC2CD90EEA00389667 /* PlayersViewController.swift */; };
 		FA1A7CBF2CD90F5200389667 /* CrazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A7CBE2CD90F5200389667 /* CrazyCell.swift */; };
 		FA90F9A82CDBACD300B3993B /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90F9A72CDBACD300B3993B /* StatsViewController.swift */; };
+		FAB5AD8F2CDE4BB30049CB7D /* WRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5AD8E2CDE4BB30049CB7D /* WRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		FA64F0532CCFC9F800ECD516 /* UsefulApp1GruperRealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsefulApp1GruperRealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA64F05D2CCFC9F800ECD516 /* UsefulApp1GruperRealUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsefulApp1GruperRealUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA90F9A72CDBACD300B3993B /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		FAB5AD8E2CDE4BB30049CB7D /* WRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -99,6 +101,7 @@
 		FA64F0312CCFC9F500ECD516 = {
 			isa = PBXGroup;
 			children = (
+				FAB5AD8E2CDE4BB30049CB7D /* WRViewController.swift */,
 				FA90F9A72CDBACD300B3993B /* StatsViewController.swift */,
 				FA1A7CBE2CD90F5200389667 /* CrazyCell.swift */,
 				FA1A7CBC2CD90EEA00389667 /* PlayersViewController.swift */,
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB5AD8F2CDE4BB30049CB7D /* WRViewController.swift in Sources */,
 				FA1A7CBD2CD90EEA00389667 /* PlayersViewController.swift in Sources */,
 				FA1A7CBF2CD90F5200389667 /* CrazyCell.swift in Sources */,
 				FA90F9A82CDBACD300B3993B /* StatsViewController.swift in Sources */,

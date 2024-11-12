@@ -8,22 +8,28 @@
 import UIKit
 
 class StatsViewController: UIViewController {
-
+    @IBOutlet weak var nameLOutlet: UILabel!
+    @IBOutlet weak var numberLOutlet: UILabel!
+    @IBOutlet weak var yardsLOutlet: UILabel!
+    @IBOutlet weak var fumblesLOutlet: UILabel!
+    @IBOutlet weak var touchdownsLOutlet: UILabel!
+    @IBOutlet weak var lostLOutlet: UILabel!
+    @IBOutlet weak var longLOutlet: UILabel!
+    @IBOutlet weak var attemptLOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        nameLOutlet.text = "Name: \(AppData.clickedOn.name)"
+        numberLOutlet.text = "#: \(AppData.clickedOn.num)"
+        yardsLOutlet.text = "YDS: \(AppData.clickedOn.yds)"
+        fumblesLOutlet.text = "FUM: \(AppData.clickedOn.fum)"
+        touchdownsLOutlet.text = "TDS: \(AppData.clickedOn.td)"
+        lostLOutlet.text = "LST: \(AppData.clickedOn.lst)"
+        longLOutlet.text = "LNG: \(AppData.clickedOn.lng)"
+        attemptLOutlet.text = "ATT: \(AppData.clickedOn.att)"
+    }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
