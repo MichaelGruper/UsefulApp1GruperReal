@@ -40,23 +40,23 @@ class RBStats: Codable{
     }
 }
 
-class WRStats{
+class WRStats: Codable{
     var td: Int
     var yds: Double
     var yac: Double
     var tgt: Int
     var rec: Int
-    var fum: Int
-    var lst: Int
+    var name: String
+    var num: Int
     
-    init(td: Int, yds: Double, yac: Double, tgt: Int, rec: Int, fum: Int, lst: Int) {
+    init(td: Int, yds: Double, yac: Double, tgt: Int, rec: Int, name: String, num: Int) {
         self.td = td
         self.yds = yds
         self.yac = yac
         self.tgt = tgt
         self.rec = rec
-        self.fum = fum
-        self.lst = lst
+        self.name = name
+        self.num = num
     }
 }
 
@@ -67,11 +67,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //AppData.defaults.set(AppData.wrArr, forKey: "wrArr")
+        //AppData.defaults.set(AppData.rbArr, forKey: "rbArr")
         if let rb = AppData.defaults.data(forKey: "rbArr"){
             if let inRB = try? AppData.decoder.decode([RBStats].self, from: rb){
                 AppData.rbArr = inRB
                 for r in AppData.rbArr{
                     print(r.name)
+                }
+            }
+        }
+        if let wr = AppData.defaults.data(forKey: "wrArr"){
+            if let inWR = try? AppData.decoder.decode([WRStats].self, from: wr){
+                AppData.wrArr = inWR
+                for w in AppData.wrArr{
+                    print(w.name)
                 }
             }
         }
